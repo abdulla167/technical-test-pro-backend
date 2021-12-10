@@ -24,7 +24,7 @@ public class ProPractitionerController {
         this.practitionerService = practitionerService1;
     }
 
-    @ApiOperation(value = "Get practitioners")
+    @ApiOperation(value = "Get practitioners", response = List.class)
     @GetMapping
     public List<Practitioner> getPractitioners() {
         return practitionerService.findAll();

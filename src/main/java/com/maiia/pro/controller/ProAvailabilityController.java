@@ -22,7 +22,7 @@ public class ProAvailabilityController {
         this.availabilityService = availabilityService1;
     }
 
-    @ApiOperation(value = "Get availabilities by practitionerId")
+    @ApiOperation(value = "Get availabilities by practitionerId", response = List.class)
     @GetMapping
     public List<AvailabilityDto> getAvailabilities(@RequestParam final Integer practitionerId) {
         return availabilityService.findByPractitionerId(practitionerId);

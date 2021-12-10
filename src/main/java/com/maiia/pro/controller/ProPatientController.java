@@ -24,7 +24,7 @@ public class ProPatientController {
         this.patientService = patientService1;
     }
 
-    @ApiOperation(value = "Get patients")
+    @ApiOperation(value = "Get patients", response = List.class)
     @GetMapping
     public List<Patient> getPatients() {
         return patientService.findAll();
